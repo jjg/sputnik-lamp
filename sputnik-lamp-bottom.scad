@@ -13,10 +13,13 @@ difference(){
 				sphere(r=sphere_size);
 				// sphere hollow
 				sphere(r=sphere_size - sphere_thickness);
+				translate([0,0,-6]){
+					sphere(r=sphere_size - sphere_thickness);
+				}
 			}
 		}
 		// light hole
-		#cylinder(r=light_lens_size,h=light_unit_height);
+		cylinder(r=light_lens_size,h=light_unit_height);
 	}
 
 	translate([0,0,sphere_size]){
